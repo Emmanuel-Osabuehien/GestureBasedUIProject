@@ -3,12 +3,12 @@
 
 * [Project Details](#details)
 * [Overview](#overview)
-* [Purpose of Application](#purpose)
 * [Deployment](#deploy)
 * [Software Requirements](#req)
-* [Identifying Gestures](#idges)
-* [Architecture](#arch)
-* [Hardware](#hardware)
+* [Purpose Of The Application](#purpose)
+* [Gestures Identified As Appropriate For This Application](#idges)
+* [Hardware Used In Creating The Application](#hardware)
+* [Architecture For The Solution](#arch)
 * [Demo](#demo)
 * [Conclusion](#con)
 * [References](#ref)
@@ -24,20 +24,20 @@
 
 ## Overview<a name = "overview"></a>
 
-## Purpose of Application<a name = "purpose"></a>
-
 ## Deployment<a name = "deploy"></a>
 
 ## Software Requirements<a name = "req"></a>
 
-## Identifying Gestures<a name = "idges"></a>
+## Purpose Of The Application<a name = "purpose"></a>
 
-## Architecture<a name = "arch"></a>
+## Gestures Identified As Appropriate For This Application<a name = "idges"></a>
 
-## Hardware<a name = "hardware"></a>
+## Hardware Used In Creating The Application<a name = "hardware"></a>
+
+## Architecture For The Solution<a name = "arch"></a>
+
+## Conclusions & Recommendations<a name = "con"></a>
 
 ## Demo<a name = "demo"></a>
-
-## Conclusion<a name = "con"></a>
 
 ## References<a name = "ref"></a>
