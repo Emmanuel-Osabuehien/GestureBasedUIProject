@@ -32,6 +32,10 @@ public class Sprite {
 
 	//draw 
 	public void draw(Graphics2D g) {
+		//checks if the sprite is destroyed then returns
+		if (isSpriteAnimDestroyed())
+			return;
+		
 		//draw sprite 
 		g.drawImage(sprites.get(currentSprite), (int) getXpos(), (int) getYpos(), null);
 	}
