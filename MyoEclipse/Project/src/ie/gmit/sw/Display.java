@@ -7,12 +7,23 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
+import ie.gmit.sw.StateMachine;
+
 public class Display extends Canvas implements Runnable{
 	// variables 
 	private static final long serialVersionUID = 1L;
 	//Thread
 	private boolean running = false;
 	private Thread thread;
+	
+	//state machine
+		public static StateMachine state;
+
+		public Display() {
+			state = new StateMachine(this);
+			state.setState((byte)0);
+		}
+	
 	//displays and where the program first starts 
 	public static void main(String[] args) {
 		//intialise the display class 
@@ -77,16 +88,46 @@ public class Display extends Canvas implements Runnable{
 		//make a counter so it prints the game is running 
 		// after 1000 times
 		int counter = 0;
+		int FPS;
+
+		//get the current time 
+		long timer = System.currentTimeMillis();
+		long lastLoopTime = System.nanoTime();
+		final int TARGET_FPS = 60;
+		final long OPTIMAL_TIME = 1000000000 / TARGET_FPS;
+		int frames = 0;
 
 		//create createBufferStrategy to start drawing the game 
 		this.createBufferStrategy(3);
 		BufferStrategy bs = this.getBufferStrategy();
 
 		while(running) {
+			
+			long now = System.nanoTime();
+			long updateLength = now - lastLoopTime;
+			lastLoopTime = now;
+			double delta = updateLength / ((double) OPTIMAL_TIME);
+
+			//update the frame 
+			frames++;
+
+			if (System.currentTimeMillis() - timer > 1000) {
+				timer += 1000;
+				FPS = frames;
+				frames = 0;
+				System.out.println(FPS);
+			}
 
 			// call the draw method 
 			draw(bs);
+			update(delta);
 
+			try {
+				Thread.sleep(((lastLoopTime - System.nanoTime()) + OPTIMAL_TIME) / 1000000);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			
 			counter++;
 			if(counter == 1000) {
 				System.out.println("The Game is Running");
@@ -107,6 +148,9 @@ public class Display extends Canvas implements Runnable{
 				// file the whole jframe black 
 				// give it some extra height and width
 				g.fillRect(0, 0, 825,710);
+				
+				//state machine draw 
+				state.draw(g);
 
 				// dispose when done 
 				g.dispose();
@@ -117,4 +161,9 @@ public class Display extends Canvas implements Runnable{
 			bs.show();
 		}  while (bs.contentsLost());	
 	}
+	
+		// this will change the position from the update 
+		public void update(double delta) {
+			state.update(delta);
+		}
 }
