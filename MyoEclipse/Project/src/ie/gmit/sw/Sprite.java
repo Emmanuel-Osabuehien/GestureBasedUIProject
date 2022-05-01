@@ -74,6 +74,7 @@ public class Sprite {
 
 	private void loopAnimation() {
 		if (timer.isTimerReady(speed) && currentSprite != limit) {
+			//resets the animation
 			currentSprite = 0;
 			timer.resetTimer();
 		}else if (timer.timerEvent(speed) && currentSprite != limit) {
@@ -84,6 +85,7 @@ public class Sprite {
 	private void playAnimation() {
 		if (timer.isTimerReady(speed) && currentSprite != limit && !isDestoryAfterAnim()) {
 			play = false;
+			//resets the animation
 			currentSprite = 0;
 		} else if (timer.isTimerReady(speed) && currentSprite == limit && isDestoryAfterAnim()) {
 			sprites = null;
@@ -99,6 +101,7 @@ public class Sprite {
 		return false;
 	}
 	
+	//checks
 	public boolean isDestoryAfterAnim() {
 		return destoryAfterAnim;
 	}
@@ -120,7 +123,20 @@ public class Sprite {
 		this.ypos = ypos;
 	}
 
+	public boolean isLoop() {
+		return loop;
+	}
 
+	public void setLoop(boolean loop) {
+		this.loop = loop;
+	}
 
+	public byte getCurrentSprite() {
+		return currentSprite;
+	}
+
+	public void setCurrentSprite(byte currentSprite) {
+		this.currentSprite = currentSprite;
+	}
 
 }
