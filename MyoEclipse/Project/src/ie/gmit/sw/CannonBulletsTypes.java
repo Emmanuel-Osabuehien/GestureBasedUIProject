@@ -6,7 +6,7 @@ import java.awt.Rectangle;
 
 import ie.gmit.sw.Blocks;
 
-public abstract class CannonBullets {
+public abstract class CannonBulletsTypes {
 
 	//variable 
 	//position and width and height 

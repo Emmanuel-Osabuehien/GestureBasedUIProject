@@ -20,7 +20,7 @@ public class GameScreen implements Statator{
 
 		public GameScreen() {
 			// send the constructor the positions 
-			cannon = new Player(canvasWidth/2-50,canvasHeight-100 , 50, 50);
+			cannon = new Player(canvasWidth/2-50,canvasHeight-100 , 50, 50, blocks);
 			blocks = new Blocks();
 		}
 
