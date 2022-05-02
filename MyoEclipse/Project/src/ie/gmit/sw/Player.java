@@ -12,6 +12,8 @@ import javax.imageio.ImageIO;
 
 public class Player implements KeyListener{
 	
+	private final double speed = 5.0d;
+	
 		// player sprite 
 		private BufferedImage player;
 
@@ -44,13 +46,19 @@ public class Player implements KeyListener{
 				
 			}
 		}
-s
+
 	public void draw(Graphics2D g) {
 		g.drawImage(player,(int) xpos,(int) ypos, width, height, null);
 	}
 	
 	public void update(double delta){
-
+		if(right && !left){
+			xpos += speed * delta;
+			rect.x = (int) xpos;
+		}if(!right && left && xpos > 10){
+			xpos -= speed * delta;
+			rect.x = (int) xpos;
+		}
 	}
 
 	@Override
@@ -71,7 +79,18 @@ s
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
-
+		int key = arg0.getKeyCode();
+		//when the right key is released right is false 
+		if(key == KeyEvent.VK_D || key == KeyEvent.VK_RIGHT){
+			right = false;
+		//when the left key is released left is false 
+		}else if (key == KeyEvent.VK_A || key == KeyEvent.VK_LEFT){
+			left = false;
+		}
+		//space released shotting stops 
+		if (key == KeyEvent.VK_SPACE){
+			shoot = false;
+		}
 	}
 
 	@Override
