@@ -10,6 +10,8 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 
+import ie.gmit.sw.Display;
+
 public class Player implements KeyListener{
 	
 	private final double speed = 5.0d;
@@ -52,7 +54,7 @@ public class Player implements KeyListener{
 	}
 	
 	public void update(double delta){
-		if(right && !left){
+		if(right && !left && xpos < 748 - width){
 			xpos += speed * delta;
 			rect.x = (int) xpos;
 		}if(!right && left && xpos > 10){
