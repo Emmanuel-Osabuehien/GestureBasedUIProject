@@ -6,6 +6,7 @@ import java.awt.Graphics2D;
 import ie.gmit.sw.Statator;
 import ie.gmit.sw.Player;
 import ie.gmit.sw.Blocks;
+import ie.gmit.sw.LevelOne;
 
 public class GameScreen implements Statator{
 	
@@ -18,21 +19,27 @@ public class GameScreen implements Statator{
 		
 		private Blocks blocks;
 
-		public GameScreen() {
+		private LevelOne level;
+
+		public GameScreen(){
+			//instaisiate block()
+			blocks = new Blocks();
 			// send the constructor the positions 
 			cannon = new Player(canvasWidth/2-50,canvasHeight-100 , 50, 50, blocks);
-			blocks = new Blocks();
+			level = new LevelOne(cannon);
 		}
 
 	@Override
 	public void update(double delta) {
 		cannon.update(delta);
+		level.update(delta, blocks);
 	}
 
 	@Override
 	public void draw(Graphics2D g) {
 		cannon.draw(g);
 		blocks.draw(g);
+		level.draw(g);
 	}
 
 	@Override

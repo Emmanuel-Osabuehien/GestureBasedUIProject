@@ -35,7 +35,7 @@ public class Display extends Canvas implements Runnable{
 		frame.add(display);
 		frame.pack();
 		// set the name of the jframe
-		frame.setTitle("Gesture Based UI Project");
+		frame.setTitle("GUI Project");
 		// if the x is pressed then JFrame exits 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//displays the canvas
