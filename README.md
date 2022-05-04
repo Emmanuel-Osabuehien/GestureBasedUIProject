@@ -116,6 +116,18 @@ We also used voice commands for the application, using a pre-built computer micr
 
 ## Conclusions & Recommendations<a name = "con"></a>
 
+I am thoroughly impressed with the outcome of my application, we had some bumps in the road with the development but it all came together in the end and we completed our goal in developing a Natural User Interface that incorporates the use of gesture control. The purpose of my app was to recreate a personal version famous arcade game for others to have fun with and I personally believe I have completed that task.
+
+Now I know what you're wondering, were there any issues or challenges, just like in the development of completing any software product there is always gonna be some issue, error, fault or challenge to overcome, here are some issues that I face along the way:
+
+- Research was difficult as there was a very limited amount of content I can find that helped me achieve what I was aiming for
+- There were issues with the Myo Armband itself, it was at times difficult for the gestures to be recognized and the Armband at times was difficult to connect and disconnect.
+- Learning gesture control for the first time became a challenge trying to get all the technology working together.
+- My partner chose to leave this course during the development of the project which was a real challenge in conjunction with the struggle to figure out what the idea for the application was going to be.
+- At one point during the development, all my java classes strangely had errors that were difficult to understand what the issue was, I then had to start from scratch and had to redo all my work that I had up to that point.
+
+In conclusion, the overall experience with this project has been a rather pleasant, entertaining and quite intuitive, I have gained so much knowledge in regards to gesture control and voice recognition throughout this whole course, whether it's how they work, how it was invented or how it has progressed throughout history as opposed to before this project where I had little to no knowledge of gesture control technology. In today's world, while Myo might be considered not the best or outdated software, I believe it is a great piece of software in the use of projects such as my own to gain an understanding on this type of technology, a lot of time and effort was put into this project and in the end the outcome was favorable and to my satisfaction.
+
 ## Demo<a name = "demo"></a>
 
 ## References<a name = "ref"></a>
