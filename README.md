@@ -38,6 +38,44 @@ This application also incorporates the use of voice commands which I also learne
 
 ## Purpose Of The Application<a name = "purpose"></a>
 
+<h5>What Is The Game</h5>
+
+![gestures](https://user-images.githubusercontent.com/48318649/166834026-4394c098-a2cc-42f1-9e08-7691033895ca.jpg)
+
+The purpose of this game is to learn, understand, explain and implement the use of voice commands and gesture control with various technology, for the voice commands we will be using microphones and for the gesture control we will be using Myo Armband. For my application, I decided to recreate the classic arcade game 'Space Invaders' with the programming language Java, to create our we used an integrated development environment (IDE) known as 'Eclipse'. The Game uses gesture control to control the movement (moving left and right) and actions (shooting bullets) of the player and uses voice commands to control actions of the game where you can start, pause, resume and reset the game.
+
+<h5>Design Of The Game</h5>
+
+![gamescreen](https://user-images.githubusercontent.com/48318649/166834187-d46878e0-9cec-4f3b-8c10-66d3e5123485.png)
+
+<h5>How To Run Application</h5>
+
+For our application, we have a Myo Script using the programming language Lua where have a function that connects the gesture controls to our application where if it locates the title of the applicatin 'GUI Project' it will return true, the code is as follows:
+
+```lua
+function onForegroundWindowChange(app, title)
+    if title == "GUI Project" then
+        reference = getRoll()
+        return true
+    end 
+end
+```
+
+<h5>Voice Commands</h5>
+
+When implementing voice commands, I used various jar files that I researched and found online to complete the use of voice controls, the main jar files known as 'Voce' that can be used by both Java and C++.
+
+```lua
+public <String> = [start | reset | stop | continue ];
+```
+
+We set up an array of strings which contain the four voice commands that our game will use which include:
+
+- Start: To start the game
+- item Stop: To pause the game
+- item Continue: To resume the game when paused
+- item Reset: To reset the game from the beginning
+
 ## Gestures Identified As Appropriate For This Application<a name = "idges"></a>
 
 ## Hardware Used In Creating The Application<a name = "hardware"></a>
