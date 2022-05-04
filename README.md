@@ -114,6 +114,81 @@ We also used voice commands for the application, using a pre-built computer micr
 
 ## Architecture For The Solution<a name = "arch"></a>
 
+<h5>Java</h5>
+
+I used Java as my programming language to recreate the famous arcade game 'Space Invaders'. I separated the Java classes into different packages, we have packages fileld will classes to control the Enemies, to control the Blocks, to control the Scoreboard, to control the Bullets, to control the Sounds and to control our Player. You will see down below the structure of the Java files:
+
+![javastructure](https://user-images.githubusercontent.com/48318649/166836394-e6821b1a-4235-46fb-ba64-e75a4e9d2d75.png)
+
+<h5>Lua</h5>
+
+I used Lua as my programming language to connect Myo Armband to the application, we also used to this to map the gestures to the keyboard. Here are some exmaples of Lua being used in our application:
+
+```lua
+function moveRight()
+	myo.keyboard("right_arrow","down")
+    rHold = true
+end
+
+function fire()
+	myo.keyboard("space","down")
+    myo.vibrate("short")
+end
+```
+
+Above we can see an example of mapping the gesture to the keyboard to move right and to shoot, so when the user rotates the armband right/press the right arrow key then the player should move right or when the user makes a fist/presses spacebar then the player should shoot.
+
+<h5>External Jar Files</h5>
+
+We used external jar files for various functions for our app, for example we used the jar file 'Voce' to add voice recognition to our app. Here we have the various libraries that were used to create this application.
+
+![jarfiles](https://user-images.githubusercontent.com/48318649/166836118-5552666b-4186-4b6e-adce-c51ecbb59d26.png)
+
+<h5>Voice Commands</h5>
+
+Using the External Jar Library knownn as 'Voce', I have been able to add voice commands to my app, I use these commands to start, pause, resume and reset the current game once it has been run.
+
+```lua
+	public void speech() {
+
+		System.out.println("Say Start!");
+
+		boolean start = false;
+		while (!start) {
+			// Normally, applications would do application-specific things
+			// here. For this sample, we'll just sleep for a little bit.
+			try {
+				Thread.sleep(300);
+			} catch (InterruptedException e) {
+			}
+			while (voce.SpeechInterface.getRecognizerQueueSize() > 0) {
+				String s = voce.SpeechInterface.popRecognizedString();
+
+				// check if s is equal to start
+				if (s.contentEquals("start")) {
+					// if it is then end the loop
+					// start = true;
+					// start the game
+					startGame = true;
+				} else if (s.contentEquals("stop")) {
+					paused = true;
+				} else if (s.contentEquals("continue")) {
+					paused = false;
+				} else if (s.contentEquals("reset")) {
+					startAgain = true;
+				} else {
+					s = "empty";
+				}
+				System.out.println("You said: " + s);
+			}
+
+		}
+
+		voce.SpeechInterface.destroy();
+
+	}
+```
+
 ## Conclusions & Recommendations<a name = "con"></a>
 
 I am thoroughly impressed with the outcome of my application, we had some bumps in the road with the development but it all came together in the end and we completed our goal in developing a Natural User Interface that incorporates the use of gesture control. The purpose of my app was to recreate a personal version famous arcade game for others to have fun with and I personally believe I have completed that task.
