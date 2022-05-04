@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{caption}
 \usepackage{graphicx}
+\usepackage{wrapfig}
 \usepackage{courier} %% Sets font for listing as Courier.
 \usepackage{listings, xcolor}
 \lstset{
@@ -48,8 +49,6 @@ This application also incorporates the use of voice commands which I also learne
 
 \subsection{What Is The Game}
 
-The purpose of this game is to learn, understand, explain and implement the use of voice commands and gesture control with various technology, for the voice commands we will be using microphones and for the gesture control we will be using Myo Armband. For my application, I decided to recreate the classic arcade game 'Space Invaders' with the programming language Java, to create our we used an integrated development environment (IDE) known as 'Eclipse'. The Game uses gesture control to control the movement (moving left and right) and actions (shooting bullets) of the player and uses voice commands to control actions of the game where you can start, pause, resume and reset the game.
-
 \begin{figure}[h]
   \includegraphics[width=\textwidth]{img/gestures.jpg}
   \centering
@@ -57,9 +56,17 @@ The purpose of this game is to learn, understand, explain and implement the use 
   \label{fig: Myo Armband Gesture Controls}
 \end{figure}
 
+The purpose of this game is to learn, understand, explain and implement the use of voice commands and gesture control with various technology, for the voice commands we will be using microphones and for the gesture control we will be using Myo Armband. For my application, I decided to recreate the classic arcade game 'Space Invaders' with the programming language Java, to create our we used an integrated development environment (IDE) known as 'Eclipse'. The Game uses gesture control to control the movement (moving left and right) and actions (shooting bullets) of the player and uses voice commands to control actions of the game where you can start, pause, resume and reset the game.
+
 \subsection{Design Of The Game}
 
 The design of the game should look as follows:
+\begin{figure}[h]
+  \includegraphics[scale=0.25]{img/gamescreen.png}
+  \centering
+  \caption{Example of Different Gesture Controls}
+  \label{fig: Myo Armband Gesture Controls}
+\end{figure}
 
 \subsection{How To Run Application}
 
@@ -132,13 +139,6 @@ We also used voice commands for the application, using a pre-built computer micr
 
 \subsection{Java}
 
-\begin{figure}[h]
-    \includegraphics[scale=0.6]{img/javalogo.jpg}
-    \centering
-    \caption{Image of Java Logo}
-    \label{fig: A Picture of the Java Logo}
-\end{figure}
-
 \hfill \break
 I used Java as my programming language to recreate the famous arcade game 'Space Invaders'. I separated the Java classes into different packages, we have packages fileld will classes to control the Enemies, to control the Blocks, to control the Scoreboard, to control the Bullets, to control the Sounds and to control our Player. You will see down below the structure of the Java files:
 
@@ -150,13 +150,6 @@ I used Java as my programming language to recreate the famous arcade game 'Space
 \end{figure}
 
 \subsection{Lua}
-
-\begin{figure}[h]
-    \includegraphics[scale=0.5]{img/lualogo.jpeg}
-    \centering
-    \caption{Image of Lua Logo}
-    \label{fig: A Picture of the Lua Logo}
-\end{figure}
 
 \hfill \break
 I used Lua as my programming language to connect Myo Armband to the application, we also used to this to map the gestures to the keyboard. Here are some exmaples of Lua being used in our application:
@@ -233,5 +226,17 @@ Using the External Jar Library knownn as 'Voce', I have been able to add voice c
 \end{lstlisting}
 
 \section{Conclusions \& Recommendations}
+
+I am thoroughly impressed with the outcome of my application, we had some bumps in the road with the development but it all came together in the end and we completed our goal in developing a Natural User Interface that incorporates the use of gesture control. The purpose of my app was to recreate a personal version famous arcade game for others to have fun with and I personally believe I have completed that task.\\ \\
+Now I know what you're wondering, were there any issues or challenges, just like in the development of completing any software product there is always gonna be some issue, error, fault or challenge to overcome, here are some issues that I face along the way:
+
+\begin{itemize}
+    \item Research was difficult as there was a very limited amount of content I can find that helped me achieve what I was aiming for
+    \item There were issues with the Myo Armband itself, it was at times difficult for the gestures to be recognized and the Armband at times was difficult to connect and disconnect.
+    \item Learning gesture control for the first time became a challenge trying to get all the technology working together.
+    \item My partner chose to leave this course during the development of the project which was a real challenge in conjunction with the struggle to figure out what the idea for the application was going to be.
+    \item At one point during the development, all my java classes strangely had errors that were difficult to understand what the issue was, I then had to start from scratch and had to redo all my work that I had up to that point.
+\end{itemize}
+In conclusion, the overall experience with this project has been a rather pleasant, entertaining and quite intuitive, I have gained so much knowledge in regards to gesture control and voice recognition throughout this whole course, whether it's how they work, how it was invented or how it has progressed throughout history as opposed to before this project where I had little to no knowledge of gesture control technology. In today's world, while Myo might be considered not the best or outdated software, I believe it is a great piece of software in the use of projects such as my own to gain an understanding on this type of technology, a lot of time and effort was put into this project and in the end the outcome was favorable and to my satisfaction.
 
 \end{document}
