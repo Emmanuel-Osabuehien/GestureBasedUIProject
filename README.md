@@ -100,6 +100,18 @@ After using the spread fingers gesture to control the shooting of the player, th
 
 ## Hardware Used In Creating The Application<a name = "hardware"></a>
 
+<h5>Myo Armband</h5>
+
+When using gesture control, we decided to use the Myo Armband. "The Myo armband is a gesture controller that triggers a variety of actions on the computer based on the contractions of your muscles and the movements of your arm".
+
+![myoarmband2](https://user-images.githubusercontent.com/48318649/166835268-a8796d90-cfba-4a87-98b1-5028ca931cfa.jpg)
+
+To use the Myo Armband, you will need to download and install the Myo SDK and Connector, this is available for Windows, Mac, Linux and Android.
+
+<h5>Microphone</h5>
+
+We also used voice commands for the application, using a pre-built computer microphone. Voice recognition software lets you dictate documents, search the web, e-mail, and more on your computer quickly and accurately just by using your voice.
+
 ## Architecture For The Solution<a name = "arch"></a>
 
 ## Conclusions & Recommendations<a name = "con"></a>
