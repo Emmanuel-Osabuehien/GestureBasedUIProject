@@ -197,7 +197,7 @@ public class Runner extends JFrame implements ActionListener {
 		new Runner();
 
 		// run the speech recognition to start the game
-		menu.sppech();
+		menu.speech();
 
 	}
 }

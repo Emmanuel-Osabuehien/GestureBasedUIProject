@@ -25,6 +25,14 @@ numberstyle = \tiny,
 
 \maketitle
 
+\begin{figure}[h]
+  \includegraphics[width=\textwidth]{img/spaceinvaders2.jpg}
+  \centering
+  \label{fig: Picture of the Space Invaders Logo}
+\end{figure}
+
+\pagebreak
+
 \tableofcontents
 
 \pagebreak
@@ -40,7 +48,7 @@ This application also incorporates the use of voice commands which I also learne
 
 \subsection{What Is The Game}
 
-The purpose of this game is to learn, understand, explain and implement the use of voice commands and gesture control with various technology, for the voice commands we will be using Cortana and for the gesture control we will be using Myo Armband. For my application, I decided to recreate the classic arcade game 'Space Invaders' with the programming language Java, to create our we used an integrated development environment (IDE) known as 'Eclipse'. The Game uses gesture control to control the movement (moving left and right) and actions (shooting bullets) of the player and uses voice commands to control actions of the game where you can start, pause, resume and reset the game.
+The purpose of this game is to learn, understand, explain and implement the use of voice commands and gesture control with various technology, for the voice commands we will be using microphones and for the gesture control we will be using Myo Armband. For my application, I decided to recreate the classic arcade game 'Space Invaders' with the programming language Java, to create our we used an integrated development environment (IDE) known as 'Eclipse'. The Game uses gesture control to control the movement (moving left and right) and actions (shooting bullets) of the player and uses voice commands to control actions of the game where you can start, pause, resume and reset the game.
 
 \begin{figure}[h]
   \includegraphics[width=\textwidth]{img/gestures.jpg}
@@ -55,7 +63,7 @@ The design of the game should look as follows:
 
 \subsection{How To Run Application}
 
-For our application, we have a Myo Script where have a function that connects the gesture controls to our application where if it locates the title of the applicatin 'GUI Project' it will return true, the code is as follows:
+For our application, we have a Myo Script using the programming language Lua where have a function that connects the gesture controls to our application where if it locates the title of the applicatin 'GUI Project' it will return true, the code is as follows:
 
 \begin{lstlisting}[language = Java , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
 function onForegroundWindowChange(app, title)
@@ -121,6 +129,108 @@ To use the Myo Armband, you will need to download and install the Myo SDK and Co
 We also used voice commands for the application, using a pre-built computer microphone. Voice recognition software lets you dictate documents, search the web, e-mail, and more on your computer quickly and accurately just by using your voice.
 
 \section{Architecture for the solution}
+
+\subsection{Java}
+
+\begin{figure}[h]
+    \includegraphics[scale=0.6]{img/javalogo.jpg}
+    \centering
+    \caption{Image of Java Logo}
+    \label{fig: A Picture of the Java Logo}
+\end{figure}
+
+\hfill \break
+I used Java as my programming language to recreate the famous arcade game 'Space Invaders'. I separated the Java classes into different packages, we have packages fileld will classes to control the Enemies, to control the Blocks, to control the Scoreboard, to control the Bullets, to control the Sounds and to control our Player. You will see down below the structure of the Java files:
+
+\begin{figure}[h]
+    \includegraphics[scale=0.6]{img/javastructure.png}
+    \centering
+    \caption{Java Project Structure}
+    \label{fig: A Picture of the Java Project Structure}
+\end{figure}
+
+\subsection{Lua}
+
+\begin{figure}[h]
+    \includegraphics[scale=0.5]{img/lualogo.jpeg}
+    \centering
+    \caption{Image of Lua Logo}
+    \label{fig: A Picture of the Lua Logo}
+\end{figure}
+
+\hfill \break
+I used Lua as my programming language to connect Myo Armband to the application, we also used to this to map the gestures to the keyboard. Here are some exmaples of Lua being used in our application:
+
+\begin{lstlisting}[language = Java , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+function moveRight()
+	myo.keyboard("right_arrow","down")
+    rHold = true
+end
+
+function fire()
+	myo.keyboard("space","down")
+    myo.vibrate("short")
+end
+\end{lstlisting}
+
+\hfill \break
+Above we can see an example of mapping the gesture to the keyboard to move right and to shoot, so when the user rotates the armband right/press the right arrow key then the player should move right or when the user makes a fist/presses spacebar then the player should shoot.
+
+\subsection{External Jar}
+
+We used external jar files for various functions for our app, for example we used the jar file 'Voce' to add voice recognition to our app. Here we have the various libraries that were used to create this application.
+
+\begin{figure}[h]
+    \includegraphics[scale=0.6]{img/jarfiles.png}
+    \centering
+    \caption{External Jar Library}
+    \label{fig: A Picture of used Jar Files}
+\end{figure}
+
+\subsection{Voice Commands}
+
+Using the External Jar Library knownn as 'Voce', I have been able to add voice commands to my app, I use these commands to start, pause, resume and reset the current game once it has been run.
+
+\begin{lstlisting}[language = Java , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+	public void speech() {
+
+		System.out.println("Say Start!");
+
+		boolean start = false;
+		while (!start) {
+			// Normally, applications would do application-specific things
+			// here. For this sample, we'll just sleep for a little bit.
+			try {
+				Thread.sleep(300);
+			} catch (InterruptedException e) {
+			}
+			while (voce.SpeechInterface.getRecognizerQueueSize() > 0) {
+				String s = voce.SpeechInterface.popRecognizedString();
+
+				// check if s is equal to start
+				if (s.contentEquals("start")) {
+					// if it is then end the loop
+					// start = true;
+					// start the game
+					startGame = true;
+				} else if (s.contentEquals("stop")) {
+					paused = true;
+				} else if (s.contentEquals("continue")) {
+					paused = false;
+				} else if (s.contentEquals("reset")) {
+					startAgain = true;
+				} else {
+					s = "empty";
+				}
+				System.out.println("You said: " + s);
+			}
+
+		}
+
+		voce.SpeechInterface.destroy();
+
+	}
+\end{lstlisting}
 
 \section{Conclusions \& Recommendations}
 

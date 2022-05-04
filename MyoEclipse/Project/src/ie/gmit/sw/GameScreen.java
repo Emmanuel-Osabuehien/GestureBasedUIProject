@@ -94,7 +94,7 @@ public class GameScreen extends JPanel implements KeyListener {
 	}
 
 	// for startint the game and quiting the menu
-	public void sppech() {
+	public void speech() {
 
 		System.out.println("Say Start!");
 
