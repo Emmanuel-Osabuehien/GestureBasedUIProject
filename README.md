@@ -78,6 +78,26 @@ We set up an array of strings which contain the four voice commands that our gam
 
 ## Gestures Identified As Appropriate For This Application<a name = "idges"></a>
 
+<h5>Various Gestures Identified By Myo</h5>
+
+Unfortunately my the partner that I originally was working on this project with, decided to sadly leave this course meaning I had full control and freedom to decide how I would incorporate gestures into my application.
+
+I was given two different options for hardware when using gesture control, using either the Myo Armband or the Leap Motion Sensor, I researched both pieces of hardware and after completing my research I decided to use the Myo Armband due to it's pre-built gestures which I decided would work great with my concept of the application, the Myo Armband has seven pre-built gestures which include:
+
+- Wave Left
+- Wave Right
+- Rotate
+- Spread Fingers
+- Double Tap
+- Make Fist
+- Direction/Pan - Up/Down
+
+When implementing the gestures into my application, we initially used the spread fingers gesture to control the shooting of the player and the wave left and wave right to control the movement of the player but as we progressed in the development of the project we decided to change this due to different reasons.
+
+After using the wave left and wave right gesture to control the movement, this became strenuous to continually have to wave your arms in both directions so we decided to use the rotate gesture instead as it didn't exhaust the user to rotate your hand clockwise and anti-clockwise to move the player from right to left and from left to right.
+
+After using the spread fingers gesture to control the shooting of the player, this gesture was not quick to react which meant I had to switch to something else, so I decided to go with the make fist gesture as it reacted on time and was much more precise.
+
 ## Hardware Used In Creating The Application<a name = "hardware"></a>
 
 ## Architecture For The Solution<a name = "arch"></a>
