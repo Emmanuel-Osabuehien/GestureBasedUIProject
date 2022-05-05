@@ -36,6 +36,13 @@ This application also incorporates the use of voice commands which I also learne
 
 ## Software Requirements<a name = "req"></a>
 
+- Java SDK (min. Java 14)
+- Java JDK
+- Eclipse IDE for Java Developers
+- Myo SDK (min. 0.9.0)
+- Myo Connector
+- Git
+
 ## Purpose Of The Application<a name = "purpose"></a>
 
 <h5>What Is The Game</h5>
