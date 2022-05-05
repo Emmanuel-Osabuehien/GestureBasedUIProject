@@ -10,7 +10,7 @@
 * [Hardware Used In Creating The Application](#hardware)
 * [Architecture For The Solution](#arch)
 * [Demo](#demo)
-* [Conclusion](#con)
+* [Conclusion & Recommendations](#con)
 * [References](#ref)
 
 ## Project Details<a name = "details"></a>
@@ -235,3 +235,9 @@ In conclusion, the overall experience with this project has been a rather pleasa
 ## Demo<a name = "demo"></a>
 
 ## References<a name = "ref"></a>
+
+- P. Kumar, S. Rawat and S. Vats, *Evaluating and exploring the MYO ARMBAND*, 2016, pp. 115-120
+- M.E. Benalcázar, A.G. Jaramillo, A. Zea, *Hand gesture recognition using machine learning and the Myo armband*, 2017, pp. 1040-1044
+- S. Jusoh and M. Yasen, *A systematic review on hand gesture recognition techniques, challenges and applications*, 2019, pp. 218
+- R. Ierusalimschy, *Programming in lua*, 2006
+- A. Mehta, *Voice Recognition*, 2002
