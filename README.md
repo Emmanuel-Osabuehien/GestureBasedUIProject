@@ -236,6 +236,11 @@ In conclusion, the overall experience with this project has been a rather pleasa
 
 ## References<a name = "ref"></a>
 
+- [Java,<br> https://docs.oracle.com/en/java/](https://docs.oracle.com/en/java/)
+- [Lua,<br> https://www.lua.org/docs.html](https://www.lua.org/docs.html)
+- [JFrame,<br> https://docs.oracle.com/javase/7/docs/api/javax/swing/JFrame.html](https://docs.oracle.com/javase/7/docs/api/javax/swing/JFrame.html)
+- [Voce,<br> http://tyl.st/projects/voce/](http://tyl.st/projects/voce/)
+- [Myo Armband,<br> https://legacy-connectors.readme.io/docs/myo-armband](https://legacy-connectors.readme.io/docs/myo-armband)
 - P. Kumar, S. Rawat and S. Vats, *Evaluating and exploring the MYO ARMBAND*, 2016, pp. 115-120
 - M.E. Benalcázar, A.G. Jaramillo, A. Zea, *Hand gesture recognition using machine learning and the Myo armband*, 2017, pp. 1040-1044
 - S. Jusoh and M. Yasen, *A systematic review on hand gesture recognition techniques, challenges and applications*, 2019, pp. 218
