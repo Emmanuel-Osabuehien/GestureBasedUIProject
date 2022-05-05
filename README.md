@@ -34,6 +34,28 @@ This application also incorporates the use of voice commands which I also learne
 
 ## Deployment<a name = "deploy"></a>
 
+1. Download and Install all the software requirements listed above.
+2. Open up command prompt and create a blank folder in a trusted location in your file explorer
+3. Navigate into the new directory using the command: 
+```bash
+cd 'Directory File Name Here'
+```
+4. Clone this repository, using the command:
+```bash
+git clone https://github.com/Emmanuel-Osabuehien/GestureBasedUIProject
+```
+5. Naviagte into the repository folder, using the command:
+```bash
+cd GestureBasedUIProject
+```
+6. 5. Naviagte into the project folder, using the command:
+```bash
+cd MyoEclipse
+```
+7. Open up Eclipse, select this folder and click launch (if this dosen't work, just import the files).
+8. To run the game, navigate into the Runner class and run the Java application.
+9. Alternatively, if you wish to skip step 6-8, you can alternatively run the bash file called 'runGame' by double clicking it and it will run the game after a few minutes.
+
 ## Software Requirements<a name = "req"></a>
 
 - Java SDK (min. Java 14)
