@@ -54,7 +54,7 @@ cd MyoEclipse
 ```
 7. Open up Eclipse, select this folder and click launch (if this dosen't work, just import the files).
 8. To run the game, navigate into the Runner class and run the Java application.
-9. Alternatively, if you wish to skip step 6-8, you can alternatively run the bash file called 'runGame' by double clicking it and it will run the game after a few minutes.
+9. Alternatively, if you wish to skip step 6-8, you can alternatively run the external jar file called 'playGame' by double clicking it and it will run the game after a few minutes.
 
 ## Software Requirements<a name = "req"></a>
 
